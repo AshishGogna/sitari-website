@@ -1,0 +1,163 @@
+:root {
+  --bg: #F8F2EE;
+  --text: #1E1E2C;
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(0,0,0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  background: url("chatbg.png") center / contain no-repeat;
+  transform: rotate(90deg);
+  opacity: 0.5;
+  z-index: -2;
+}
+
+/* GLASS */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--text);
+  border-radius: 14px;
+  font-size: 14px;
+}
+
+.glass-btn {
+  background: rgba(255,255,255,0.35);
+}
+
+.primary-btn {
+  background: rgba(30,30,44,0.08);
+}
+
+.secondary-btn {
+  background: rgba(30,30,44,0.04);
+}
+
+/* HERO */
+.hero {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-glass {
+  max-width: 760px;
+  padding: 50px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 34px;
+  font-weight: 300;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-top: 14px;
+}
+
+.download-buttons {
+  margin-top: 28px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.feature-card {
+  padding: 30px;
+}
+
+.feature-card h2 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* SEO CONTENT */
+.seo-content {
+  margin: 40px;
+  padding: 40px;
+}
+
+.seo-content h2 {
+  font-weight: 300;
+}
+
+/* CTA */
+.cta {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-box {
+  padding: 40px;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  padding: 30px;
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.7;
+}
